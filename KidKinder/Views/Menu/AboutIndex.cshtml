@@ -1,0 +1,144 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model List<KidKinder.Entities.AboutList>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>KidKinder Galeri Sayfası</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="~/Templates/kidkinder-1.0.0/img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap"
+          rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+          rel="stylesheet" />
+
+    <!-- Flaticon Font -->
+    <link href="~/Templates/kidkinder-1.0.0/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/Templates/kidkinder-1.0.0/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Templates/kidkinder-1.0.0/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/Templates/kidkinder-1.0.0/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href=""
+               class="navbar-brand font-weight-bold text-secondary"
+               style="font-size: 50px">
+                <i class="flaticon-043-teddy-bear"></i>
+                <span class="text-primary">KidKinder</span>
+            </a>
+            <button type="button"
+                    class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between"
+                 id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    <a href="/Default/Index/" class="nav-item nav-link">Anasayfa</a>
+                    <a href="/Menu/AboutIndex/" class="nav-item nav-link">Hakkımızda</a>
+                    <a href="/Menu/ClassRoomIndex/" class="nav-item nav-link">Sınıflarımız</a>
+                    <a href="/Menu/TeacherIndex/" class="nav-item nav-link">Öğretmenlerimiz</a>
+                    <a href="/Menu/GalleryIndex/" class="nav-item nav-link active">Galeri</a>
+                    <a href="/Menu/ContactIndex/" class="nav-item nav-link">İletişim</a>
+                </div>
+                <a href="/Login/AdminLogin/" class="btn btn-primary px-4">Admin Giriş</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center"
+             style="min-height: 400px">
+            <h3 class="display-3 font-weight-bold text-white">Hakkımızda</h3>
+
+        </div>
+    </div>
+    <!-- Header End -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                         src="@ViewBag.bfoto"
+                         alt="" />
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-title pr-5">
+                        <span class="pr-2">@ViewBag.header</span>
+                    </p>
+                    <h1 class="mb-4">@ViewBag.title</h1>
+                    <p>
+                        @ViewBag.description
+                    </p>
+                    <div class="row pt-2 pb-4">
+                        <div class="col-6 col-md-4">
+                            <img class="img-fluid rounded" src="@ViewBag.sfoto" alt="" />
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <ul class="list-inline m-0">
+                                @foreach (var x in Model)
+                                {
+                                    <li class="py-2 border-top border-bottom">
+                                        <i class="fa fa-check text-primary mr-3"></i>@x.Description
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Templates/kidkinder-1.0.0/lib/easing/easing.min.js"></script>
+    <script src="~/Templates/kidkinder-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Templates/kidkinder-1.0.0/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Templates/kidkinder-1.0.0/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="~/Templates/kidkinder-1.0.0/mail/jqBootstrapValidation.min.js"></script>
+    <script src="~/Templates/kidkinder-1.0.0/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/Templates/kidkinder-1.0.0/js/main.js"></script>
+</body>
+</html>
+
+

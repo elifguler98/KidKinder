@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/font-awesome-n.min.css">
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="row">
+                    @*Grafik*@
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-stat-card">
+                            <div class="card-block">
+                                <div class="row align-items-center b-b-default">
+                                    <div class="col-sm-6 b-r-default p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-user text-c-purple f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>10K</h5>
+                                                <p class="text-muted m-b-0">Visitors</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="fas fa-volume-down text-c-green f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>100%</h5>
+                                                <p class="text-muted m-b-0">Volume</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-file-alt text-c-red f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>2000+</h5>
+                                                <p class="text-muted m-b-0">Files</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="far fa-envelope-open text-c-blue f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>120</h5>
+                                                <p class="text-muted m-b-0">Mails</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*En çok tercih edilen seçmeli ders*@
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-clr-stat-card text-white green ">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-green">
+                                        <i class="fas fa-star mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>En Çok Tercih Edilen Ders </h5>
+                                        <p class="m-b-0">@ViewBag.satranc</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mat-clr-stat-card text-white blue">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-blue">
+                                        <i class="fas fa-trophy mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>Toplam Ders Sayısı</h5>
+                                        <p class="m-b-0">@ViewBag.sinifsayi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Veli Listesi*@
+                    @Html.Action("_PartialTestimonial")
+                    <div class="col-xl-6 col-md-12">
+                        <div class="row">
+                            <!-- sale card start -->
+
+                            <div class="col-md-6">
+                                <div class="card text-center order-visitor-card">
+                                    <div class="card-block">
+                                        <h6 class="m-b-0">Toplam Öğrenci</h6>
+                                        <h4 class="m-t-15 m-b-15"><i class="fa fa-child m-r-15 text-c-blue"></i>@ViewBag.ogrencisayi</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card text-center order-visitor-card">
+                                    <div class="card-block">
+                                        <h6 class="m-b-0">Son Öğrencinin Adı</h6>
+                                        <h4 class="m-t-15 m-b-15"><i class=" fa fa-child m-r-15 text-c-blue"></i>@ViewBag.sonogrenci</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card text-center order-visitor-card">
+                                    <div class="card-block">
+                                        <h6 class="m-b-0">Öğretmen Sayısı</h6>
+                                        <h4 class="m-t-15 m-b-15"><i class=" fa fa-users m-r-15 text-c-purple"></i>@ViewBag.ogrt</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card text-center order-visitor-card">
+                                    <div class="card-block">
+                                        <h6 class="m-b-0">Sınıf Sayısı</h6>
+                                        <h4 class="m-t-15 m-b-15"><i class="fa fa-bell m-r-15 text-c-purple"></i>@ViewBag.sinif</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- sale card end -->
+                        </div>
+                    </div>
+
+                    @*Grafik Bölümü*@
+                    <div class="col-xl-12">
+                        <div class="card proj-progress-card">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6">
+                                        <h6>Papatyalar Sınıfı Doluluk</h6>
+                                        <h5 class="m-b-30 f-w-700">4<span class="text-c-green m-l-10">32%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-c-red" style="width:32%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <h6>Menekşeler Sınıfı Doluluk</h6>
+                                        <h5 class="m-b-30 f-w-700">5<span class="text-c-red m-l-10">34.5%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-c-blue" style="width:35%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <h6>Güller Sınıfı Doluluk</h6>
+                                        <h5 class="m-b-30 f-w-700">2<span class="text-c-green m-l-10">40%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-c-green" style="width:40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <h6>Toplam Kontenjan</h6>
+                                        <h5 class="m-b-30 f-w-700">11<span class="text-c-green m-l-10">+28%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-c-yellow" style="width:28%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/material_able-main/assets/js/jquery/jquery.min.js "></script>
+<script type="text/javascript" src="~/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="~/material_able-main/assets/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="~/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="~/material_able-main/assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="~/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+<!-- slimscroll js -->
+<script src="~/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+
+<!-- menu js -->
+<script src="~/material_able-main/assets/js/pcoded.min.js"></script>
+<script src="~/material_able-main/assets/js/vertical/vertical-layout.min.js "></script>
+
+<script type="text/javascript" src="~/material_able-main/assets/js/script.js "></script>

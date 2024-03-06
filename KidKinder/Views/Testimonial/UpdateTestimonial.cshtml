@@ -1,0 +1,63 @@
+﻿@model KidKinder.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Sınıf Düzenlemesi</h5>
+                                <span>Sınıf ile ilgili verileri eksiksiz olarak doldurunuz.</span>
+                            </div>
+                            <div class="card-block">
+                                <form method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Hizmet Id</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.TestimonialId, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Adı Soyadı</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Başlık</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Yorum</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Veli Fotosu</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-warning">Veli Bilgilerini Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kidkinder Admin Giriş</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/Templates/classic-login-form/style.css">
+
+</head>
+<body>
+    
+        <!-- partial:index.partial.html -->
+        <section class='login' id='login'>
+            <div class='head'>
+                <h1 class='company'> KidKinder  Admin Girişi</h1>
+            </div>
+           <br />
+            <br />
+            <div class='form'>
+                <form method="post" style="text-align:center">
+                    <input type="text" placeholder='Kullanıcı Adı' class='text' name="username" required><br>
+                    <input type="password" placeholder='••••' class='password' name="password"><br>
+                    <button class='btn-login' id='do-login' >Giriş Yap</button>
+
+                </form>
+            </div>
+        </section>
+    
+
+        <!-- partial -->
+        @*<script src="~/Templates/classic-login-form/script.js"></script>*@
+
+</body>
+</html>
+
+

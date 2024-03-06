@@ -1,0 +1,37 @@
+﻿@model List<KidKinder.Entities.AboutList>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid rounded mb-5 mb-lg-0"
+                     src="@ViewBag.bfoto"
+                     alt="" />
+            </div>
+            <div class="col-lg-7">
+                <p class="section-title pr-5">
+                    <span class="pr-2">@ViewBag.header</span>
+                </p>
+                <h1 class="mb-4">@ViewBag.title</h1>
+                <p>
+                   @ViewBag.description
+                </p>
+                <div class="row pt-2 pb-4">
+                    <div class="col-6 col-md-4">
+                        <img class="img-fluid rounded" src="@ViewBag.sfoto" alt="" />
+                    </div>
+                    <div class="col-6 col-md-8">
+                        <ul class="list-inline m-0">
+                            @foreach (var x in Model)
+                            {
+                            <li class="py-2 border-top border-bottom">
+                                <i class="fa fa-check text-primary mr-3"></i>@x.Description
+                            </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>

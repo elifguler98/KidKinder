@@ -1,0 +1,62 @@
+﻿@*@model List<KidKinder.Entities.BookASeat>*@
+@{
+    ViewBag.Title = "BookASeatList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Ön Kayıt Listesi </h5>
+                        <span>Ön kayıtların tutulduğu sayfa.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Adı</th>
+                                        <th>Email</th>
+                                        <th>Sil</th>
+                                     
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.BookASeatId</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Email</td>
+                                            <td><a href="/BookASeat/DeleteBookASeat/@item.BookASeatId" class="btn btn-danger">Sil</a></td>
+                                            
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
