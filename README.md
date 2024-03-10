@@ -1,0 +1,2 @@
+İçinde Entity Framework, Code First, MsSql, Google Chart teknolojileri bulunan MVC projesi. Anaokuluna dair bilgilerin bulunduğu, danışanların default sayfasından önkayıt yapabildiği anaokulu sitesi. 
+Admin paneli üzerinden ekle, sil, güncelle gibi crud işlemlerinin tamamı yapılabilmektedir. Galerideki fotoğrafların aktif pasif hale getirilmesi yine Admin Paneli üzerinden gerçekleştirilebilmektedir.
